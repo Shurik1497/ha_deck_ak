@@ -82,7 +82,7 @@ void HdValueCard::render_() {
     lv_label_set_text(lv_value_, value_.c_str());
     lv_obj_set_style_text_color(lv_value_, lv_color_hex(color_), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(lv_value_, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(lv_value_, &Font24, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(lv_value_, &Font48, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(lv_value_, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(lv_value_, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(lv_value_, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -107,7 +107,7 @@ void HdValueCard::render_() {
     lv_obj_set_x(text_container, 0);
     lv_obj_set_y(text_container, 1);
     lv_obj_set_width(text_container, lv_pct(100));
-    lv_obj_set_height(text_container, 24);
+    lv_obj_set_height(text_container, 48);
     lv_obj_set_align(text_container, LV_ALIGN_BOTTOM_MID);
     lv_obj_set_flex_flow(text_container, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(text_container, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
@@ -130,7 +130,7 @@ void HdValueCard::render_() {
         lv_label_set_text(icon_lbl, icon_.c_str());
         lv_obj_set_style_text_color(icon_lbl, lv_color_hex(color_), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_opa(icon_lbl, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_text_font(icon_lbl, &Material48, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_font(icon_lbl, &Material24, LV_PART_MAIN | LV_STATE_DEFAULT);
     }
     if (!text_.empty())
     {
@@ -141,7 +141,7 @@ void HdValueCard::render_() {
         lv_label_set_text(text_lbl, text_.c_str());
         lv_obj_set_style_text_color(text_lbl, lv_color_hex(color_), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_opa(text_lbl, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_text_font(text_lbl, &Font16, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_font(text_lbl, &Font24, LV_PART_MAIN | LV_STATE_DEFAULT);
     }
 
     if (enabled_) {

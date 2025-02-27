@@ -50,7 +50,7 @@ void HdValueCard::render_() {
 
     lv_obj_set_style_radius(lv_main_, 5, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(lv_main_, lv_color_hex(bg_color_), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(lv_main_, 25, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(lv_main_, 225, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_width(lv_main_, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_color(lv_main_, lv_color_hex(bg_color_), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_opa(lv_main_, 255, LV_PART_MAIN | LV_STATE_DEFAULT);

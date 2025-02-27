@@ -32,7 +32,7 @@ VALUE_CARD_CONFIG_SCHEMA = cv.Schema(
         cv.Optional(CONF_UNIT): cv.string,
         cv.Optional(CONF_VALUE): cv.returning_lambda,
         cv.Optional(CONF_COLOR, default=0xFFFFFF): cv.hex_uint32_t,
-        cv.Optional(CONF_BG_COLOR, default=0x000000): cv.hex_uint32_t,
+        cv.Optional(CONF_BG_COLOR, default=0x999999): cv.hex_uint32_t,
         cv.Optional(CONF_ON_CLICK): automation.validate_automation(
             {
                 cv.GenerateID(CONF_TRIGGER_ID): cv.declare_id(ValueCardClickTrigger),

@@ -58,10 +58,10 @@ async def build_value_card(var, config):
         cg.add(var.add_value_lambda(val))
 
     if color := config.get(CONF_COLOR):
-        cg.add(var.set_unit(color))
+        cg.add(var.set_color(color))
 
     if bg_color := config.get(CONF_BG_COLOR):
-        cg.add(var.set_unit(bg_color))
+        cg.add(var.set_bg_color(bg_color))
 
     for conf in config.get(CONF_ON_CLICK, []):
         trigger = cg.new_Pvariable(conf[CONF_TRIGGER_ID], var)

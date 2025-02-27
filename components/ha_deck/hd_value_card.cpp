@@ -16,20 +16,10 @@ void HdValueCard::set_unit(std::string unit) {
 }
 
 void HdValueCard::set_color(std::uint32_t color) {
-    if (color.empty())
-    {
-        color_ = 0xFFFFFF;
-    }
-    
     color_ = color;
 }
 
 void HdValueCard::set_bg_color(std::uint32_t bg_color) {
-    if (bg_color.empty())
-    {
-        bg_color_ = 0x000000;
-    }
-    
     bg_color_ = bg_color;
 }
 

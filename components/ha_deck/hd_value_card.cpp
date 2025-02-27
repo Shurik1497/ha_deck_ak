@@ -15,11 +15,11 @@ void HdValueCard::set_unit(std::string unit) {
     unit_ = unit;
 }
 
-void HdValueCard::set_color(std::string color) {
+void HdValueCard::set_color(std::uint32 color) {
     color_ = color;
 }
 
-void HdValueCard::set_bg_color(std::string bg_color) {
+void HdValueCard::set_bg_color(std::uint32 bg_color) {
     bg_color_ = bg_color;
 }
 

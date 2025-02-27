@@ -11,6 +11,8 @@ public:
     void set_text(std::string text);
     void set_icon(std::string icon);
     void set_toggle(bool toggle);
+    void set_color(std::uint32_t color);
+    void set_bg_color(std::uint32_t bg_color);
     bool is_checked();
 
     void add_checked_lambda(std::function<optional<bool>()> &&f);
@@ -38,7 +40,9 @@ private:
     std::string text_;
     std::string icon_;
     lv_obj_t *button_;
-
+    std::uint32_t color_;
+    std::uint32_t bg_color_;
+    
     std::function<optional<bool>()> checked_fn_ = nullptr;
     CallbackManager<void()> click_callback_{};
     CallbackManager<void()> turn_on_callback_{};

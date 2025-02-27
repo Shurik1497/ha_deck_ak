@@ -37,6 +37,8 @@ CONF_ON_CLICK = "on_click"
 CONF_ON_TURN_ON = "on_turn_on"
 CONF_ON_TURN_OFF = "on_turn_off"
 CONF_ON_LONG_PRESS = "on_long_press"
+CONF_BG_COLOR = "bg_color"
+CONF_COLOR = "color"
 
 BUTTON_CONFIG_SCHEMA = cv.Schema(
     {
@@ -45,6 +47,8 @@ BUTTON_CONFIG_SCHEMA = cv.Schema(
         cv.Optional(CONF_ICON): cv.string,
         cv.Optional(CONF_TOGGLE): cv.boolean,
         cv.Optional(CONF_CHECKED): cv.returning_lambda,
+        cv.Optional(CONF_COLOR, default=0xFFFFFF): cv.hex_uint32_t,
+        cv.Optional(CONF_BG_COLOR, default=0x999999): cv.hex_uint32_t,
         cv.Optional(CONF_ON_CLICK): automation.validate_automation(
             {
                 cv.GenerateID(CONF_TRIGGER_ID): cv.declare_id(ButtonClickTrigger),
@@ -81,6 +85,12 @@ async def build_button(var, config):
                 config[CONF_CHECKED], [], return_type=cg.optional.template(bool)
             )
         cg.add(var.add_checked_lambda(checked))
+
+    if color := config.get(CONF_COLOR):
+        cg.add(var.set_color(color))
+
+    if bg_color := config.get(CONF_BG_COLOR):
+        cg.add(var.set_bg_color(bg_color))
 
     for conf in config.get(CONF_ON_CLICK, []):
         trigger = cg.new_Pvariable(conf[CONF_TRIGGER_ID], var)

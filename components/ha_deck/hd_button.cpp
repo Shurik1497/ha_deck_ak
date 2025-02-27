@@ -15,11 +15,11 @@ void HdButton::set_toggle(bool toggle) {
     toggle_ = toggle;
 }
 
-void HdValueCard::set_color(std::uint32_t color) {
+void HdButton::set_color(std::uint32_t color) {
     color_ = color;
 }
 
-void HdValueCard::set_bg_color(std::uint32_t bg_color) {
+void HdButton::set_bg_color(std::uint32_t bg_color) {
     bg_color_ = bg_color;
 }
 

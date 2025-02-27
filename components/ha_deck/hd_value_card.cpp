@@ -67,7 +67,7 @@ void HdValueCard::render_() {
     lv_obj_set_flex_flow(value_container, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(value_container, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_END, LV_FLEX_ALIGN_START);
     lv_obj_clear_flag(value_container, LV_OBJ_FLAG_SCROLLABLE);
-    lv_obj_set_style_bg_color(value_container, lv_color_hex(bg_color), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(value_container, lv_color_hex(bg_color_), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(value_container, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_width(value_container, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_row(value_container, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -80,7 +80,7 @@ void HdValueCard::render_() {
     lv_obj_set_y(lv_value_, 5);
     lv_obj_set_align(lv_value_, LV_ALIGN_CENTER);
     lv_label_set_text(lv_value_, value_.c_str());
-    lv_obj_set_style_text_color(lv_value_, lv_color_hex(color), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(lv_value_, lv_color_hex(color_), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(lv_value_, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(lv_value_, &Font24, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(lv_value_, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -97,7 +97,7 @@ void HdValueCard::render_() {
         lv_obj_set_y(unit_lbl, 5);
         lv_obj_set_align(unit_lbl, LV_ALIGN_BOTTOM_RIGHT);
         lv_label_set_text(unit_lbl, unit_.c_str());
-        lv_obj_set_style_text_color(unit_lbl, lv_color_hex(color), LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_color(unit_lbl, lv_color_hex(color_), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_opa(unit_lbl, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_font(unit_lbl, &Font16, LV_PART_MAIN | LV_STATE_DEFAULT);
     }
@@ -113,7 +113,7 @@ void HdValueCard::render_() {
     lv_obj_set_flex_align(text_container, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_clear_flag(text_container, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_set_style_radius(text_container, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(text_container, lv_color_hex(bg_color), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(text_container, lv_color_hex(bg_color_), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(text_container, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_width(text_container, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(text_container, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -128,7 +128,7 @@ void HdValueCard::render_() {
         lv_obj_set_height(icon_lbl, LV_SIZE_CONTENT);
         lv_obj_set_align(icon_lbl, LV_ALIGN_BOTTOM_MID);
         lv_label_set_text(icon_lbl, icon_.c_str());
-        lv_obj_set_style_text_color(icon_lbl, lv_color_hex(color), LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_color(icon_lbl, lv_color_hex(color_), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_opa(icon_lbl, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_font(icon_lbl, &Material24, LV_PART_MAIN | LV_STATE_DEFAULT);
     }
@@ -139,7 +139,7 @@ void HdValueCard::render_() {
         lv_obj_set_height(text_lbl, LV_SIZE_CONTENT);
         lv_obj_set_align(text_lbl, LV_ALIGN_BOTTOM_MID);
         lv_label_set_text(text_lbl, text_.c_str());
-        lv_obj_set_style_text_color(text_lbl, lv_color_hex(color), LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_color(text_lbl, lv_color_hex(color_), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_opa(text_lbl, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_font(text_lbl, &Font16, LV_PART_MAIN | LV_STATE_DEFAULT);
     }

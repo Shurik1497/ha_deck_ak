@@ -12,8 +12,8 @@ public:
     void set_icon(std::string icon);
     void set_unit(std::string unit);
     void set_value(std::string value);
-    void set_color(std::uint32 color);
-    void set_bg_color(std::uint32 bg_color);
+    void set_color(std::uint32_t color);
+    void set_bg_color(std::uint32_t bg_color);
 
     void add_value_lambda(std::function<optional<std::string>()> &&f);
     void add_on_click_callback(std::function<void()> &&callback);
@@ -32,8 +32,8 @@ private:
     std::string icon_;
     std::string unit_;
     std::string value_;
-    std::uint32 color_;
-    std::uint32 bg_color_;
+    std::uint32_t color_;
+    std::uint32_t bg_color_;
 
     lv_obj_t *lv_main_;
     lv_obj_t *lv_value_;

@@ -32,6 +32,8 @@ private:
     std::string icon_;
     std::string unit_;
     std::string value_;
+    std::string color_;
+    std::string bg_color_;
 
     lv_obj_t *lv_main_;
     lv_obj_t *lv_value_;

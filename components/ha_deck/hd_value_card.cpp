@@ -130,7 +130,7 @@ void HdValueCard::render_() {
         lv_label_set_text(icon_lbl, icon_.c_str());
         lv_obj_set_style_text_color(icon_lbl, lv_color_hex(color_), LV_PART_MAIN | LV_STATE_DEFAULT);
         lv_obj_set_style_text_opa(icon_lbl, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
-        lv_obj_set_style_text_font(icon_lbl, &Material24, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_font(icon_lbl, &Material48, LV_PART_MAIN | LV_STATE_DEFAULT);
     }
     if (!text_.empty())
     {

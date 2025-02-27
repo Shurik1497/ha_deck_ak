@@ -15,7 +15,7 @@ void HdValueCard::set_unit(std::string unit) {
     unit_ = unit;
 }
 
-void HdValueCard::set_color(std::uint32 color) {
+void HdValueCard::set_color(std::uint32_t color) {
     if (color.empty())
     {
         color_ = 0xFFFFFF;
